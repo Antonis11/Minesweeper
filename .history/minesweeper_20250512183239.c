@@ -18,7 +18,6 @@ void create_level(void);
 void check_surround(int i, int j);
 void show_level(void);
 int open(int x,int y);
-void read_text(char str[], int size, int flag);
 
 void panel(void) {
     int i,j;
@@ -220,25 +219,6 @@ int open(int x, int y) {
     return 1;
 }
 
-
-void read_text(char str[], int size, int flag) {
-    int len;
-    if(fgets(str, size, stdin) == NULL) {
-        printf("ERROR: fgets() failed\n");
-        exit(1);
-    }
-
-    len = strlen(str);
-    if(len > 0) {
-        if(flag && str[len-1] == '\n')
-            str[len-1] = '\0';
-    }
-    else {
-        printf("ERROR: No input\n");
-        exit(1);
-    }
-}    
-
 int main(void) {
     int i,row,col,x,y,s,z;
     char str[15];
@@ -293,8 +273,8 @@ int main(void) {
             else
                 printf("NO VALID COMMAND!\n");
 
-            if(!open(row-1,col-1))
-                printf("INVALID DIMENSIONS GIVEN!!!\n");
+    if(!open(row-1,col-1))
+        printf("INVALID DIMENSIONS GIVEN!!!\n");
     }
 
     return 0;

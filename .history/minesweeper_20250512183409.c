@@ -293,8 +293,8 @@ int main(void) {
             else
                 printf("NO VALID COMMAND!\n");
 
-            if(!open(row-1,col-1))
-                printf("INVALID DIMENSIONS GIVEN!!!\n");
+    if(!open(row-1,col-1))
+        printf("INVALID DIMENSIONS GIVEN!!!\n");
     }
 
     return 0;
