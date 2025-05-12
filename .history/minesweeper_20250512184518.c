@@ -342,8 +342,8 @@ int main(void) {
                 printf("NO VALID COMMAND!\n");
 
             mark(row-1,col-1);
-        }
-    }
-    
+  }
+
     return 0;
+    }
 }
