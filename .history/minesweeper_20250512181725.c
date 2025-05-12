@@ -187,12 +187,13 @@ int main(void) {
             printf("INVALID DIMENSIONS GIVEN!\n");
     }while( (ROWS * COLUMNS * 0.1 < 1) || ROWS>15 || COLUMNS>15 );
     multi = select_dif();
-    
-    panel();
-    open_squares = 0;
-    win = (ROWS * COLUMNS) - mine_count;
-    create_level();
-    
+
+    while(1) {
+        panel();
+        open_squares = 0;
+        win = (ROWS * COLUMNS) - mine_count;
+        create_level();
+    }
 
     return 0;
 
