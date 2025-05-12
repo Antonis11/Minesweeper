@@ -236,25 +236,6 @@ void mark(int x, int y) {
     return; 
 }
 
-void cheat(int x, int y) {
-
-    if((x<0)|| (y<0) || (x>=ROWS) || (y>=COLUMNS) ) {
-        printf("INVALID DIMENSIONS GIVEN!\n");
-        return;
-    }
-    else if(array_visible[x][y] != '#') {
-        printf("Square already opened!\n");
-        return;
-    }
-
-    if(array_main[x][y] == Mine)
-        printf("Mine Here!!\n");
-    else if(array_main[x][y] == 0)
-        printf("Empty Square\n");
-    else
-        printf("%d Mine Around\n", array_main[x][y]);
-}
-
 void read_text(char str[], int size, int flag) {
     int len;
     if(fgets(str, size, stdin) == NULL) {
